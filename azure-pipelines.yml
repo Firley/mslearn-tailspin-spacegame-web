@@ -1,5 +1,5 @@
 trigger:
-- '*'
+- 'main'
 
 pool:
   vmImage: ubuntu-latest
@@ -18,5 +18,5 @@ steps:
   displayName: 'Build the project - Release'
   inputs:
     command: 'build'
-    arguments: '--no-restore --configuration Release'
+    arguments: '--restore --configuration Release'
     projects: '**/*.csproj'
